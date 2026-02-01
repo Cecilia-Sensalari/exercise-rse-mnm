@@ -56,5 +56,5 @@ plot_grts_comparison <- ggplot(
     labs(color = "Version", x = "Type", y = "Unique locations")
 
 # Save plot
-ggsave(plot = plot_grts_comparison, filename = "sample_location_comparison.pdf",
+ggsave(plot = plot_grts_comparison, filename = sprintf("sample_location_%s_%s.pdf", version_1, version_2),
        width = 15, height = 10, units = "cm")
