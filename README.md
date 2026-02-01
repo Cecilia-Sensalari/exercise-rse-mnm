@@ -46,5 +46,5 @@ The called functions are defined in `functions_exercise.R`.
 
 The script generates in the launching directory a PDF plot showing the number of unique sample locations per habitat type in each sample version. Example name: `sample_location_poc_0.13.1_poc_0.14.0.pdf`.
 
-
+![Example output plot for versions poc_0.13.1 and poc_0.14.0.](example_output_poc_0.13.1_poc_0.14.0.pdf)
 
