@@ -1,8 +1,8 @@
-# Documentation
+# Exercise RSE MNM
 
 ## Goal
 
-The `exercise_rse_mnm` repository contains the code written to solve the two tasks assigned as exercise for the INBO Research Software Engineer voor de Meetnetten Natuurlijk Milieu position.
+The `exercise-rse-mnm` repository contains the code written to solve the two tasks assigned as exercise for the INBO Research Software Engineer (RSE) voor de Meetnetten Natuurlijk Milieu (MNM) position.
 The user has access to different versions of spatial samples from the PAS impact monitoring project and the goal is to compare them according to what explained here below.
 
 ### Task 1
