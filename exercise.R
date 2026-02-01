@@ -24,14 +24,16 @@ source("config_exercise.R")
 # Subset sample belonging to the first version
 samples_v1 <- subset_by_scheme_water(version_number_val = version_1,
                                 scheme_val = scheme_input,
-                                hydr_class_val = hydr_class_input)
+                                hydr_class_val = hydr_class_input,
+                                path_to_parent_dir = path_to_parent_dir_input)
 
 # Task 2
 
 # Subset sample belonging to the second version
 samples_v2 <- subset_by_scheme_water(version_number_val = version_2,
                                 scheme_val = scheme_input,
-                                hydr_class_val = hydr_class_input)
+                                hydr_class_val = hydr_class_input,
+                                path_to_parent_dir = path_to_parent_dir_input)
 
 # Get unique grts_address values per stratum in the two required versions
 unique_grts_v1 <- get_unique_locations(sample_subset = samples_v1)

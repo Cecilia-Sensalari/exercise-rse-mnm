@@ -4,6 +4,7 @@
 # Define sample versions to be compared
 version_1 <- "poc_0.13.1"
 version_2 <- "poc_0.14.0"
+path_to_parent_dir_input <- "./test_data" # "./Versies"
 
 # Define scheme
 scheme_input <- "GW_03.3"

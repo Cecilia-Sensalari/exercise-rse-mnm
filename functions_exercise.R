@@ -9,6 +9,7 @@
 #' @param version_number_val Sample version
 #' @param scheme_val Scheme name
 #' @param hydr_class_val Water class name (single value or vector)
+#' @path_to_parent_dir Path to parent directory containing the version directories
 #'
 #' @return Subsection of sample dataframe showing only rows related to the
 #' desired scheme and to the stratum values belonging to the desired water
@@ -17,12 +18,13 @@
 #'
 #' @examples
 #' With single water class
-#' subset_by_scheme_water("poc_0.14.0", "GW_03.3", "HC2")
+#' subset_by_scheme_water("poc_0.14.0", "GW_03.3", "HC2", "./test_data)
 #' With vector of water classes
-#' subset_by_scheme_water("poc_0.14.0", "GW_03.3", c("HC2", "HC3))
+#' subset_by_scheme_water("poc_0.14.0", "GW_03.3", c("HC2", "HC3), "./test_data)
 subset_by_scheme_water <- function(version_number_val,
                                    scheme_val,
-                                   hydr_class_val){
+                                   hydr_class_val,
+                                   path_to_parent_dir){
 
     # Get the list of water classes associated to stratum variable (from n2khab)
     list_type_hydr_class <- n2khab::read_types()[,c("type", "hydr_class")]
@@ -31,8 +33,8 @@ subset_by_scheme_water <- function(version_number_val,
     types_in_hydr_class <- filter(list_type_hydr_class, hydr_class %in% hydr_class_val)
 
     # Read CSV file of the asked version
-    spatial_samples_raw <- read.csv(sprintf("./Versies/%s/samples/spatial_samples.csv",
-                                            version_number_val))
+    spatial_samples_raw <- read.csv(sprintf("%s/%s/samples/spatial_samples.csv",
+                                            path_to_parent_dir , version_number_val))
 
     # Filter CSV based on scheme and the stratum values associated to the given hydr_class
     spatial_samples <- filter(spatial_samples_raw,
