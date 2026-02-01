@@ -53,7 +53,8 @@ plot_grts_comparison <- ggplot(
 ) +
     geom_point() +
     theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    labs(color = "Version", x = "Type", y = "Unique locations")
+    labs(color = "Version", x = "Type", y = "Unique locations") +
+    ggtitle(sprintf("Number of unique locations in %s and %s", version_1, version_2))
 
 # Save plot
 ggsave(plot = plot_grts_comparison, filename = sprintf("sample_location_%s_%s.pdf", version_1, version_2),
