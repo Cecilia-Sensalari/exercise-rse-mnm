@@ -35,11 +35,13 @@ hydr_class_input <- c("HC1", "HC12", "HC2")
 
 ## How to use
 
-After having configured file `config_exercise.R`, the user executes `exercise.R` on the terminal:
-```
-Rscript exercise.R
-```
-The called functions are defined in `functions_exercise.R`.
+1. Configure `config_exercise.R`, adapting the defaults to your use-case.
+
+2. Execute `exercise.R` on the terminal:
+
+    ```
+    Rscript exercise.R
+    ```
 
 
 ## Output
@@ -47,4 +49,5 @@ The called functions are defined in `functions_exercise.R`.
 The script generates in the launching directory a PDF plot showing the number of unique sample locations per habitat type in each sample version. Example name: `sample_location_poc_0.13.1_poc_0.14.0.pdf`.
 
 ![Example output plot for versions poc_0.13.1 and poc_0.14.0.](sample_location_poc_0.13.1_poc_0.14.0.png)
+
 
