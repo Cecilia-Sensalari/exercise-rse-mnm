@@ -34,8 +34,7 @@ jobs:
           r-version: '4.5.2'
 
       - name: Run test
-        run: exercise.R
-        shell: Rscript {0}
+        run: Rscript exercise.R
 
       - uses: actions/upload-artifact@v4
         name: Downloadable output PDF file
