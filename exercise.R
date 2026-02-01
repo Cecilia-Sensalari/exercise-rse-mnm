@@ -1,8 +1,7 @@
 # Install n2khab from https://inbo.github.io/n2khab/
-# install.packages("n2khab", repos = c(inbo = "https://inbo.r-universe.dev",
-#                                      CRAN = "https://cloud.r-project.org"))
-# Install tidyverse to get ggplot for graph
-# install.packages("tidyverse")
+install.packages("n2khab", repos = c(inbo = "https://inbo.r-universe.dev", CRAN = "https://cloud.r-project.org"))
+# Install dplyr and ggplot2
+install.packages(c("dplyr", "ggplot2"), repos = "https://ftp.belnet.be/mirror/CRAN/")
 
 # Load packages
 library(n2khab)
@@ -24,14 +23,16 @@ source("config_exercise.R")
 # Subset sample belonging to the first version
 samples_v1 <- subset_by_scheme_water(version_number_val = version_1,
                                 scheme_val = scheme_input,
-                                hydr_class_val = hydr_class_input)
+                                hydr_class_val = hydr_class_input,
+                                path_to_parent_dir = path_to_parent_dir_input)
 
 # Task 2
 
 # Subset sample belonging to the second version
 samples_v2 <- subset_by_scheme_water(version_number_val = version_2,
                                 scheme_val = scheme_input,
-                                hydr_class_val = hydr_class_input)
+                                hydr_class_val = hydr_class_input,
+                                path_to_parent_dir = path_to_parent_dir_input)
 
 # Get unique grts_address values per stratum in the two required versions
 unique_grts_v1 <- get_unique_locations(sample_subset = samples_v1)
