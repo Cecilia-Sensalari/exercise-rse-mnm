@@ -2,7 +2,7 @@
 
 ## Goal
 
-The present repository contains the code written to solve the two tasks assigned as exercise for the INBO Research Software Engineer voor de Meetnetten Natuurlijk Milieu position.
+The `exercise_rse_mnm` repository contains the code written to solve the two tasks assigned as exercise for the INBO Research Software Engineer voor de Meetnetten Natuurlijk Milieu position.
 The user has access to different versions of spatial samples from the PAS impact monitoring project and the goal is to compare them according to what explained here below.
 
 ### Task 1
@@ -44,7 +44,7 @@ The called functions are defined in `functions_exercise.R`.
 
 ## Output
 
-The script generates in the launching directory a PDF plot showing the comparison between the two sample versions. Example name: `sample_location_poc_0.13.1_poc_0.14.0.pdf`.
+The script generates in the launching directory a PDF plot showing the number of unique sample locations per habitat type in each sample version. Example name: `sample_location_poc_0.13.1_poc_0.14.0.pdf`.
 
 
 
