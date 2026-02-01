@@ -1,5 +1,3 @@
-# exercise_rse_mnm
-
 # Documentation
 
 ## Goal
