@@ -46,7 +46,7 @@ The called functions are defined in `functions_exercise.R`.
 
 ## Output
 
-The script generates in the launching directory a PDF plot showing the comparison between the two sample versions.
+The script generates in the launching directory a PDF plot showing the comparison between the two sample versions. Example name: `sample_location_poc_0.13.1_poc_0.14.0.pdf`.
 
 
 
