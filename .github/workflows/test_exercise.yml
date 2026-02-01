@@ -40,4 +40,4 @@ jobs:
         name: Downloadable output PDF file
         with:
           name: test_output
-          path: sample_location_*
+          path: sample_location_*.pdf
