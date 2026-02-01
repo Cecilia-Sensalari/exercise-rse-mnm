@@ -1,8 +1,8 @@
 # Install n2khab from https://inbo.github.io/n2khab/
-# install.packages("n2khab", repos = c(inbo = "https://inbo.r-universe.dev",
-#                                      CRAN = "https://cloud.r-project.org"))
+install.packages("n2khab", repos = c(inbo = "https://inbo.r-universe.dev",
+                                     CRAN = "https://cloud.r-project.org"))
 # Install tidyverse to get ggplot for graph
-# install.packages("tidyverse")
+install.packages("tidyverse")
 
 # Load packages
 library(n2khab)
