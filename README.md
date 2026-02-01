@@ -14,28 +14,31 @@ Compare, between two sample dataset versions (poc_0.13.1 en poc_0.14.0), the sam
 
 ## Configuration
 
-The user defines input variable from the configuration file `config_exercise.R`:
+Specify the input variables in the configuration file `config_exercise.R`:
 
-Define the two sample versions to be compared. The two strings must be the name of the directories containing the source data (assumed located at `samples/spatial_samples.csv`):
-```
-version_1 <- "poc_0.13.1"
-version_2 <- "poc_0.14.0"
-```
+- Define the two sample versions to be compared. The two strings must be the name of the directories containing the source data (assumed located at `samples/spatial_samples.csv`):
 
-Define to which monitoring network the sample dataset will be restricted:
-```
-scheme_input <- "GW_03.3"
-```
+    ```
+    version_1 <- "poc_0.13.1"
+    version_2 <- "poc_0.14.0"
+    ```
 
-Define to which water class(es) the sample dataset will be restricted. This value can either be a string for a single class or a vector for a list of classes:
-```
-hydr_class_input <- "HC1"
-hydr_class_input <- c("HC1", "HC12", "HC2")
-```
+- Define to which monitoring network the sample dataset will be restricted:
+    
+    ```
+    scheme_input <- "GW_03.3"
+    ```
+
+- Define to which water class(es) the sample dataset will be restricted. This value can either be a string for a single class or a vector for a list of classes:
+
+    ```
+    hydr_class_input <- "HC1"
+    hydr_class_input <- c("HC1", "HC12", "HC2")
+    ```
 
 ## How to use
 
-1. Configure `config_exercise.R`, adapting the defaults to your use-case.
+1. Configure `config_exercise.R`, adapting the values to your use-case.
 
 2. Execute `exercise.R` on the terminal:
 
@@ -46,7 +49,9 @@ hydr_class_input <- c("HC1", "HC12", "HC2")
 
 ## Output
 
-The script generates in the launching directory a PDF plot showing the number of unique sample locations per habitat type in each sample version. Example name: `sample_location_poc_0.13.1_poc_0.14.0.pdf`.
+The script generates in the launching directory a PDF plot showing the number of unique sample locations per habitat type in each sample version. The output file is named `sample_location_{version1}_{version2}.pdf`.
+
+The code is tested on versions `poc_0.13.1` and `poc_0.14.0`, whose sample data is included in the `test_data` directory.
 
 ![Example output plot for versions poc_0.13.1 and poc_0.14.0.](sample_location_poc_0.13.1_poc_0.14.0.png)
 
